@@ -1,0 +1,24 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+
+            <solid android:color="#f4f4f4"/>
+
+
+        </shape>
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape>
+
+            <solid android:color="#ffffff"/>
+            <stroke
+                android:width="0.6dp"
+                android:color="@color/orange"/>
+        </shape>
+    </item>
+</layer-list>
+

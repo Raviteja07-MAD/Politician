@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="bottom|end">
+
+                    <LinearLayout
+                        android:id="@+id/se_all_flwrs_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:paddingRight="@dimen/padding_10"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/edittextblue_bg"
+                        android:layout_gravity="center">
+
+                        <com.o3sa.politician.customfonts.CustomBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13K"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"/>
+
+                        <com.o3sa.politician.customfonts.CustomRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Followers"
+                            android:textSize="14dp"
+                            android:textColor="@color/lite_color_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/se_all_following_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:paddingRight="@dimen/padding_10"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/edittextblue_bg">
+
+                        <com.o3sa.politician.customfonts.CustomBoldTextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13K"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"/>
+
+                        <com.o3sa.politician.customfonts.CustomRegularTextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Following"
+                            android:textSize="14dp"
+                            android:textColor="@color/lite_color_text"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kcr_modi_meeting"/>
+
+                <ImageView
+                    android:id="@+id/editicon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="8dp"
+                    android:layout_margin="2dp"
+                    android:tint="@color/orange"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="end"
+                    android:background="@drawable/editicon_bg"/>
+
+                <com.o3sa.politician.circularimageview.CircularImageView
+                    android:id="@+id/photo"
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/logotrs"
+                    android:layout_marginTop="250dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:orientation="vertical">
+
+                <com.o3sa.politician.customfonts.CustomRegularTextView
+                    android:id="@+id/profile_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/johson"
+                    android:visibility="visible"
+                    android:textColor="@color/post_text_color"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"/>
+
+                <com.o3sa.politician.customfonts.CustomRegularTextView
+                    android:id="@+id/profile_updatedtime_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lochbar"
+                    android:visibility="visible"
+                    android:textColor="@color/lite_color_text"
+                    android:layout_centerInParent="true"
+                    android:textSize="14dp"/>
+
+                <com.o3sa.politician.customfonts.CustomRegularTextView
+                    android:id="@+id/profile_website_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://www.trspartyonline.org/"
+                    android:visibility="visible"
+                    android:textColor="@color/lite_color_text"
+                    android:layout_centerInParent="true"
+                    android:textSize="14dp"
+                    android:autoLink="all"/>
+
+                <com.o3sa.politician.customfonts.CustomRegularTextView
+                    android:id="@+id/profile_partyname_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telangana Rashtra Samithi"
+                    android:visibility="visible"
+                    android:textColor="@color/post_text_color"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="4dp"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.o3sa.politician.customfonts.CustomBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/members"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:textSize="15dp"
+                        android:textColor="@color/orange" />
+
+                    <com.o3sa.politician.customfonts.CustomBoldTextView
+                        android:id="@+id/prfle_vweslst_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vweall"
+                        android:layout_weight="0.5"
+                        android:textStyle="bold"
+                        android:gravity="right|center_vertical"
+                        android:textSize="15dp"
+                        android:textColor="@color/orange" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/prfle_membrs_recyler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:scrollbars="none"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

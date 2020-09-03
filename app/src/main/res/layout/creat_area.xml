@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/new_actionbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/newactionbar_backbutton"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <com.o3sa.politician.customfonts.CustomEditText
+                android:id="@+id/any_pickup_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_areas"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/map_icon"
+                android:drawableTint="@color/post_text_color"
+                android:focusableInTouchMode="false"
+                android:textSize="16dp"
+                android:gravity="bottom|center_vertical"
+                android:textColorHint="@color/post_text_color"
+                android:textColor="@color/post_text_color"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <com.o3sa.politician.customfonts.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/alias_nme"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="16dp"
+                android:textColorHint="@color/post_text_color"
+                android:textColor="@color/post_text_color"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_txt_bg"
+                android:orientation="horizontal">
+
+                <com.o3sa.politician.customfonts.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.13"
+                    android:textSize="14dp"
+                    android:imeOptions="actionDone"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="@color/post_text_color"
+                    android:textColor="@color/post_text_color"
+                    android:hint="@string/area_nme"
+                    />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_clr"/>
+
+                <LinearLayout
+                    android:id="@+id/pickuploc_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.87"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/mapicon_bg"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:tint="@color/white"
+                        android:clickable="false"
+                        android:src="@drawable/map_icon"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_txt_bg"
+                android:orientation="horizontal">
+
+                <com.o3sa.politician.customfonts.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.13"
+                    android:textSize="14dp"
+                    android:imeOptions="actionDone"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="@color/post_text_color"
+                    android:textColor="@color/post_text_color"
+                    android:hint="@string/alias_nme"
+                    />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_clr"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.87"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/mapicon_bg"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:tint="@color/white"
+                        android:clickable="false"
+                        android:src="@drawable/map_icon"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.o3sa.politician.customfonts.CustomButton
+                android:id="@+id/creat_area_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="@color/white"
+                android:text="@string/submt"
+                android:textSize="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_addevent_bg"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

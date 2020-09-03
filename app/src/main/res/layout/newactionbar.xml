@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/actionbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/orange"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/custm_menu_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/white"
+                android:src="@drawable/menu_icon"/>
+
+            <ImageView
+                android:id="@+id/backbtn_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toRightOf="@id/custm_menu_img"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:tint="@color/white"
+                android:src="@drawable/back_arrow"/>
+
+            <com.o3sa.politician.customfonts.CustomRegularTextView
+                android:id="@+id/title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="18dp"/>
+
+            <ImageView
+                android:id="@+id/cstm_ntftn_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/white"
+                android:src="@drawable/notifications"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

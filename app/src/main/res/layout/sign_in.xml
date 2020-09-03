@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/politician" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center|center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.o3sa.politician.customfonts.CustomRegularTextView
+                        android:id="@+id/sign_in_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/signin_btn_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <com.o3sa.politician.customfonts.CustomRegularTextView
+                        android:id="@+id/sign_up_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/signin_white_btn_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/form_text_color"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sign_in_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnin_email_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnin_pswd_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.o3sa.politician.customfonts.CustomButton
+                        android:id="@+id/sgnin_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/signin_btn_bg"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <com.o3sa.politician.customfonts.CustomRegularTextView
+                        android:id="@+id/sgnin_frgtpswd_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/frgt_password"
+                        android:textColor="@color/orange"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/signup_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnup_name_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/email_">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnup_email_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/phone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnup_phne_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnup_pswd_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/cnfrm_password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sgnup_cnfmpswd_edtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.o3sa.politician.customfonts.CustomEditText
+                        android:id="@+id/sgnup_brth_edtx"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/date_of_brth"
+                        android:background="@drawable/edit_txt_bg"
+                        android:editable="false"
+                        android:drawableRight="@drawable/calendericon"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:focusable="false"
+                        android:textColor="@color/lite_color_text"
+                        android:textColorHint="@color/lite_color_text"
+                        android:focusableInTouchMode="false"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <com.o3sa.politician.customfonts.CustomEditText
+                        android:id="@+id/sgnup_grnder_edtx"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/gender"
+                        android:background="@drawable/edit_txt_bg"
+                        android:editable="false"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:focusable="false"
+                        android:textColor="@color/post_text_color"
+                        android:textColorHint="@color/lite_color_text"
+                        android:focusableInTouchMode="false"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:hint="@string/partyname">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:hint="@string/position">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/post_text_color"
+                            android:textColorHint="@color/lite_color_text"
+                            android:textSize="15dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.o3sa.politician.customfonts.CustomEditText
+                        android:id="@+id/sgnup_area_edtx"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="@string/area"
+                        android:background="@drawable/edit_txt_bg"
+                        android:editable="false"
+                        android:drawableRight="@drawable/dropdown_icon"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:focusable="false"
+                        android:textColor="@color/post_text_color"
+                        android:textColorHint="@color/lite_color_text"
+                        android:focusableInTouchMode="false"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/sgnup_trmscndtn_chbx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.o3sa.politician.customfonts.CustomRegularTextView
+                            android:id="@+id/sgnup_trmscndtn_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:text="@string/aggreeto_terms"
+                            android:textColor="@color/lite_color_text"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                    <com.o3sa.politician.customfonts.CustomButton
+                        android:id="@+id/sgnup_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/signin_btn_bg"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
